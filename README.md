@@ -29,7 +29,7 @@ First, when first string characters can be rearranged to match the second one:
 ```bash
 $ curl -XPOST -s -H 'Content-Type : application/json'\
        -d '{"word1":"rekqodlw", "word2":"world"}'\
-       http://localhost:5000/scramble | jq '.'
+       http://localhost:3000/scramble | jq '.'
 {
   "scramble": true
 }
@@ -38,7 +38,7 @@ Now, when it cannot:
 ```bash
 $ curl -XPOST -s -H 'Content-Type : application/json'\
        -d '{"word1":"katas", "word2":"steak"}'\
-       http://localhost:5000/scramble | jq '.'
+       http://localhost:3000/scramble | jq '.'
 {
   "scramble": false
 }
