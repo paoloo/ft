@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="js/app.js"></script>
+		<style>
+			input[type=button], input[type=submit], input[type=reset] {
+				background-color: #4CAF50; border: none; color: white; padding: 16px 32px; text-decoration: none; margin: 4px 2px; cursor: pointer;
+			}
+			input[type=text] {
+				border: 2px solid #4CAF50; border-radius: 4px; padding: 16px 32px;
+			}
+			#outterblock { border: 2px solid #4CAF50; background-color: #C0C0C0; }
+		</style>
+		<title>FT:: a simple clojure+clojurescript test</title>
+	</head>
+	<body>
+		<center>
+			<div id="contents" style="width: 70%">
+				<br/><br/><br/>
+				<h1>Scramble?</h1>
+				<br/><br/>
+				<div id="outterblock">
+					Please input two strings below:<br/>
+					<form name="scrambleform">
+						<strong>First word:</strong> <input type="text" name="word1" size="20"><br/>
+						<strong>Second word:</strong> <input type="text" name="word2" size="20"><br/>
+						<input type="button" value=" Test them! " onClick="client.app.scramble(document.scrambleform.word1.value, document.scrambleform.word2.value);">
+					</form>
+				</div>
+				<br/><br/>
+
+				A portion of the first word's characters can be rearranged to match the second word? <h1 class="scrambleresult">?????</h1>
+			</div>
+		</center>
+	</body>
+</html>
